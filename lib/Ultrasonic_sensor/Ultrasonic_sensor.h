@@ -5,11 +5,12 @@
 class ultrasonicSensor
 {
     public:
-        ultrasonicSensor(byte trigger, byte echo);
+        ultrasonicSensor(byte trigger, byte echo,unsigned char sample);
         long distance();
     private:
         byte _trigger;
         byte _echo;
+        char _sample;
         long _timeEcho;
 };
 #endif
